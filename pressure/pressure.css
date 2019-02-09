@@ -1,0 +1,62 @@
+/* CSS Document */
+ 
+body {
+	font-family: arial;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 100%;
+	background-color: #ffffff; 
+	background-image: url(panel.jpg);
+	background-repeat: no-repeat;
+    }
+#tile {
+	position: absolute;
+	left: 27px;
+	top: 45px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+#countdown {
+	height: 52px;
+	width: 554px;
+	position: absolute;
+	left: 46px;
+	top: 551px;
+	font-family: Kremlin;
+	font-size: 12pt;
+	color: #000;
+}
+
+#movebox {
+	height: 31px;
+	width: 200px;
+	position: absolute;
+	left: 583px;
+	top: 364px;
+	font-family: Kremlin;
+	font-size: 12pt;
+	color: #000;
+}
+
+#arrows {
+	height: 126px;
+	width: 112px;
+	position: absolute;
+	left: 637px;
+	top: 436px;
+	background-image: url(arrows.png);
+	background-repeat: no-repeat;
+	background-position: 0px -378px;
+}
+
+#audiopanel {
+	height: 60px;
+	width: 190px;
+	position: absolute;
+	left: 583px;
+	top: 473px;
+	background-repeat: no-repeat;
+	background-position: center;
+}

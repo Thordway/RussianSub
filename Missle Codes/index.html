@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"/>
+<title>Torpedo Launch Command</title>
+<link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<form action="process.php" id="myForm" method="post" target="_top">
+    <input type="hidden" name="codeStr" id="codeStr" value='4321'/><BR />
+    <input type="hidden" name="startTime" id="startTime" value='0'/>
+    <input type="hidden" name="nextPage" id="nextPage" value='missile.php'/>
+    </form>
+
+</body>
+
+<script language="javascript">
+	var minutes = 60000;
+	var num = Math.floor(Math.random()*4*minutes) + (7*minutes);
+	var countTimer=window.setInterval(function(){startTorpedos()},num);
+		
+	console.debug("starting in = "+(num/minutes)+" minutes");
+
+	function startTorpedos(){
+		var startTime = document.getElementById('startTime');
+		date = new Date();
+		startTime.value = date.getTime();
+		document.getElementById("myForm").submit();
+    }
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Engine Admin</title>
+</head>
+<body>
+	<form action="process.php" method="post" target="_top">
+	Engine Admin Panel:  <BR />
+    Time in Minues: <input type="text" name="lengthTime"id="lengthTime"  value='8'/><BR />
+    <input type="radio" name="nextPage" value="index.html" checked>Go To Wait Screen<br>
+    <input type="radio" name="nextPage" value="engine.php">Immediately Start Test<br>
+    <input type="hidden" name="startTime" id="startTime" value='0'/>
+    <input type="hidden" name="stage" id="stage" value='0'/>
+    <input type="submit" name="Start" value="Start"/>
+
+    </form>
+	<p></p>
+	<form action="testsound.php" method="post" target="_top">
+	Test Sound:  <BR />
+    <input type="radio" name="soundType" value="ogg" checked>ogg<br>
+    <input type="radio" name="soundType" value="mp3">mp3<br>
+    <input type="radio" name="soundType" value="wav">wav<br>
+    <input type="submit" name="Go" value="Test"/>
+
+    </form>
+</body>
+
+
+</html>

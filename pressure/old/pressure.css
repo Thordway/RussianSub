@@ -1,0 +1,190 @@
+/* CSS Document */
+
+body {
+	font-family: arial;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 100%;
+	background-color: #ffffff;
+	background-image: url(panel.png);
+	background-repeat: no-repeat;
+    }
+#light0 {
+	height: 44px;
+	width: 44px;
+	position: absolute;
+	left: 44px;
+	top: 336px;
+	background-image: url(lights.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+#light1 {
+	height: 44px;
+	width: 44px;
+	position: absolute;
+	left: 44px;
+	top: 546px;
+	background-image: url(lights.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+#light2 {
+	height: 44px;
+	width: 44px;
+	position: absolute;
+	left: 306px;
+	top: 170px;
+	background-image: url(lights.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+#light3 {
+	height: 44px;
+	width: 44px;
+	position: absolute;
+	left: 562px;
+	top: 170px;
+	background-image: url(lights.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+#light4 {
+	height: 44px;
+	width: 44px;
+	position: absolute;
+	left: 388px;
+	top: 170px;
+	background-image: url(lights.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+#light5 {
+	height: 44px;
+	width: 44px;
+	position: absolute;
+	left: 483px;
+	top: 170px;
+	background-image: url(lights.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+#arrows {
+	height: 126px;
+	width: 112px;
+	position: absolute;
+	left: 68px;
+	top: 91px;
+	background-image: url(arrows.png);
+	background-repeat: no-repeat;
+	background-position: 0px -378px;
+}
+#slider {
+	height: 207px;
+	width: 35px;
+	position: absolute;
+	left: 674px;
+	top: 115px;
+	background-image: url(slider.png);
+	background-repeat: no-repeat;
+	background-position: 3px 10px;
+}
+#clickhere {
+	height: 67px;
+	width: 177px;
+	position: absolute;
+	left: 367px;
+	top: 67px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(click%20here.png);
+}
+#countdown {
+	height: 52px;
+	width: 296px;
+	position: absolute;
+	left: 309px;
+	top: 345px;
+	font-family: Kremlin;
+	font-size: 12pt;
+	color: #000;
+}
+#switch0 {
+	height: 77px;
+	width: 60px;
+	position: absolute;
+	left: 36px;
+	top: 381px;
+	background-image: url(switchup.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#switch1 {
+	height: 77px;
+	width: 60px;
+	position: absolute;
+	left: 36px;
+	top: 465px;
+	background-image: url(switchup.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#switch2 {
+	height: 77px;
+	width: 60px;
+	position: absolute;
+	left: 298px;
+	top: 86px;
+	background-image: url(switchup.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#switch3 {
+	height: 77px;
+	width: 60px;
+	position: absolute;
+	left: 554px;
+	top: 86px;
+	background-image: url(switchup.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#switch4 {
+	height: 77px;
+	width: 60px;
+	position: absolute;
+	left: 379px;
+	top: 227px;
+	background-image: url(switchup.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#switch5 {
+	height: 77px;
+	width: 60px;
+	position: absolute;
+	left: 475px;
+	top: 227px;
+	background-image: url(switchup.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#captain {
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	left: 163px;
+	top: 366px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#audiopanel {
+	height: 60px;
+	width: 190px;
+	position: absolute;
+	left: 264px;
+	top: 461px;
+	background-repeat: no-repeat;
+	background-position: center;
+}

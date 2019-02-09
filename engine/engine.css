@@ -1,0 +1,50 @@
+/* CSS Document */
+
+body {
+	font-family: arial;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 100%;
+	background-color: #ffffff;
+	background-image: url(panel.jpg);
+	background-repeat: no-repeat;
+    }
+
+#countdown {
+	height: 28px;
+	width: 337px;
+	position: absolute;
+	left: 41px;
+	top: 563px;
+	font-family: Kremlin;
+	font-size: 12pt;
+	color: #000;
+}
+
+#tile {
+	position: absolute;
+	left: 27px;
+	top: 45px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+#captain {
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	left: 555px;
+	top: 560px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#audiopanel {
+	height: 57px;
+	width: 130px;
+	position: absolute;
+	left: 643px;
+	top: 470px;
+	background-repeat: no-repeat;
+	background-position: center;
+}

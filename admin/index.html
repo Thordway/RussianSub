@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Submarine Administration</title>
+<link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload='setupPage()'>
+<div id="box">
+<div id="info">Start Simulation</div>
+<div id="numdisasters">0 Disasters</div>
+<div id="time1">Disaster every <input name="dtime" type="text" id="dtime" value="5" size="5"/> minute(s).
+Window: <input name="dwindow" type="text" id="dwindow" value="5" size="5"/>
+<!--Debug: <input name="debug" type="text" id="debug" value="5" size="50"/>-->
+</div>
+<div id="time2">Kraken arrives no earlier than <input name="dkraken" type="text" id="dkraken" value="45" size="5"/> minute(s).  Window: <input name="dkwindow" type="text" id="dkwindow" value="10" size="5"/>
+</div>
+<div><table><tr>
+<td><img src='normal.png' width=25 height=25 onclick="setState(0,ROOM_STATES.ROOM_OK)"></td>
+<td><img src='flood.png' width=25 height=25 onclick="setState(0,ROOM_STATES.ROOM_FLOOD)"></td>
+<td><img src='fire.png' width=25 height=25 onclick="setState(0,ROOM_STATES.ROOM_FIRE)"></td>
+<td id="bridge">Bridge: Normal</td>
+</tr></table></div>
+<div><table><tr>
+<td><img src='normal.png' width=25 height=25 onclick="setState(1,ROOM_STATES.ROOM_OK)"></td>
+<td><img src='flood.png' width=25 height=25 onclick="setState(1,ROOM_STATES.ROOM_FLOOD)"></td>
+<td><img src='fire.png' width=25 height=25 onclick="setState(1,ROOM_STATES.ROOM_FIRE)"></td>
+<td id="captain">Captain's Bunk: Normal</td>
+</tr></table></div>
+<div><table><tr>
+<td><img src='normal.png' width=25 height=25 onclick="setState(2,ROOM_STATES.ROOM_OK)"></td>
+<td><img src='flood.png' width=25 height=25 onclick="setState(2,ROOM_STATES.ROOM_FLOOD)"></td>
+<td><img src='fire.png' width=25 height=25 onclick="setState(2,ROOM_STATES.ROOM_FIRE)"></td>
+<td id="engine">Engine Room: Normal</td>
+</tr></table></div>
+<div><table><tr>
+<td><img src='normal.png' width=25 height=25 onclick="setState(3,ROOM_STATES.ROOM_OK)"></td>
+<td><img src='flood.png' width=25 height=25 onclick="setState(3,ROOM_STATES.ROOM_FLOOD)"></td>
+<td><img src='fire.png' width=25 height=25 onclick="setState(3,ROOM_STATES.ROOM_FIRE)"></td>
+<td id="pressure">Pressure Room: Normal</td>
+</tr></table></div>
+<div><table><tr>
+<td><img src='normal.png' width=25 height=25 onclick="setState(4,ROOM_STATES.ROOM_OK)"></td>
+<td><img src='flood.png' width=25 height=25 onclick="setState(4,ROOM_STATES.ROOM_FLOOD)"></td>
+<td><img src='fire.png' width=25 height=25 onclick="setState(4,ROOM_STATES.ROOM_FIRE)"></td>
+<td id="sick">Sick Bay: Normal</td>
+</tr></table></div>
+<div><table><tr>
+<td><img src='normal.png' width=25 height=25 onclick="setState(5,ROOM_STATES.ROOM_OK)"></td>
+<td><img src='flood.png' width=25 height=25 onclick="setState(5,ROOM_STATES.ROOM_FLOOD)"></td>
+<td><img src='fire.png' width=25 height=25 onclick="setState(5,ROOM_STATES.ROOM_FIRE)"></td>
+<td id="supply">Supply Area: Normal</td>
+</tr></table></div>
+<div><table><tr>
+<td><img src='normal.png' width=25 height=25 onclick="setState(6,ROOM_STATES.ROOM_OK)"></td>
+<td><img src='flood.png' width=25 height=25 onclick="setState(6,ROOM_STATES.ROOM_FLOOD)"></td>
+<td><img src='fire.png' width=25 height=25 onclick="setState(6,ROOM_STATES.ROOM_FIRE)"></td>
+<td id="torpedo">Torpedo Bay: Normal</td>
+</tr></table></div>
+<div><table><tr>
+<td><img src='normal.png' width=25 height=25 onclick="setState(7,ROOM_STATES.ROOM_OK)"></td>
+<td><img src='flood.png' width=25 height=25 onclick="setState(7,ROOM_STATES.ROOM_FLOOD)"></td>
+<td><img src='fire.png' width=25 height=25 onclick="setState(7,ROOM_STATES.ROOM_FIRE)"></td>
+<td id="galley">Galley: Normal</td>
+</tr></table></div>
+<div><table><tr>
+<td><img src='normal.png' width=25 height=25 onclick="setState(8,ROOM_STATES.ROOM_OK)"></td>
+<td><img src='flood.png' width=25 height=25 onclick="setState(8,ROOM_STATES.ROOM_FLOOD)"></td>
+<td><img src='fire.png' width=25 height=25 onclick="setState(8,ROOM_STATES.ROOM_FIRE)"></td>
+<td id="hall1">Hallway 1: Normal</td>
+</tr></table></div>
+<div><table><tr>
+<td><img src='normal.png' width=25 height=25 onclick="setState(9,ROOM_STATES.ROOM_OK)"></td>
+<td><img src='flood.png' width=25 height=25 onclick="setState(9,ROOM_STATES.ROOM_FLOOD)"></td>
+<td><img src='fire.png' width=25 height=25 onclick="setState(9,ROOM_STATES.ROOM_FIRE)"></td>
+<td id="hall2">Hallway 2: Normal</td>
+</tr></table></div>
+<div><table><tr>
+<td><img src='normal.png' width=25 height=25 onclick="setMode(MODES.NORMAL)"></td>
+<td><img src='kraken.png' width=25 height=25 onclick="setMode(MODES.KRAKEN)"></td>
+<td><img src='spacer.png' width=25 height=25 "></td>
+<td id="kraken">Normal Mode</td>
+</tr></table></div>
+</body>
+
+
+<script language="javascript">
+	var countTimer=window.setInterval(function(){updateTimer()},1000);
+	var chanceOfIssue;
+	var ROOM_STATES = {
+	  ROOM_OK : {value: 0, name: "Normal"}, 
+	  ROOM_TO_FIRE: {value: 1, name: "Set on Fire"}, 
+	  ROOM_TO_FLOOD : {value: 2, name: "Introduce Flood"},
+	  ROOM_FIRE: {value: 3, name: "Is On Fire"}, 
+	  ROOM_FLOOD : {value: 4, name: "Is Flooded"},
+	};
+	var MODES = {
+	  NORMAL : {value: 0, name: "Normal"}, 
+	  RELEASE: {value: 1, name: "Release the Kraken"}, 
+	  KRAKEN : {value: 2, name: "Kraken Mode"},
+	  POST : {value: 2, name: "Post Kraken"},
+	}
+	var startTime = 0;
+	var rooms = ["bridge","captain","engine","pressure","sick","supply","torpedo","galley","hall1","hall2"]; 
+	var roomtext = ["Bridge","Captain's Bunk","Engine Room","Pressure Room","Sick Bay","Supply Area","Torpedo Bay","Galley","Hallway 1","Hallway 2"]; 
+	var roomstate = new Array(1);
+	var numrooms = 10;
+	var krakenTime;
+	var mode = MODES.NORMAL;
+    var numdisasters = 0;
+
+	function setupPage(){
+		var i;
+		for (i = 0; i < numrooms; i++)
+			roomstate[i] = ROOM_STATES.ROOM_OK;
+		chanceOfIssue = 0;
+		var date = new Date();
+		startTime = date.getTime(); 
+		krakenTime = startTime + Math.floor(Math.random()* 10 * 60000) + (45 * 60000); //45 mins to 55 mins
+		//krakenTime = startTime + (1 * 60000); //1 min
+	}
+	
+	function updateTimer () {
+		var dtime = document.getElementById('dtime');
+		var dwindow = document.getElementById('dwindow');
+		//var out = document.getElementById('debug');
+		chanceOfIssue++;
+		//if (Math.floor(Math.random()*120) + 10 < chanceOfIssue)
+		var num = Math.floor(Math.random()*dwindow.value*60) + (dtime.value*60);
+		//out.value = "num = "+num+"; chance = "+chanceOfIssue;
+		if (num < chanceOfIssue) //5 - 10 minutes...
+		{
+			if (causeCalamaty())
+				chanceOfIssue = 0;
+		}
+		
+		var countdown = document.getElementById('info');
+		var date = new Date();
+ 		var mils = date.getTime() - startTime;
+		countdown.textContent = "MILS " + mils;
+		var milstr = '';
+		var secstr = '';
+		var minstr = '';
+		var mins = Math.floor(mils/60000);
+		mils = mils - (mins * 60000);
+		var secs = Math.floor(mils/1000);
+		mils = mils - (secs * 1000);
+		mils = Math.floor(6 * mils / 100);
+		if (mils < 10)
+			milstr = '0';
+		if (secs < 10)
+			secstr = '0';
+		if (mins < 10)
+			minstr = '0';
+		countdown.textContent = "Simulation Running: " +minstr+ mins + ":" +secstr+secs; 
+        if (mode == MODES.KRAKEN)
+        	countdown.textContent += " -- Kraken Mode!";
+            
+        var ndistext = document.getElementById('numdisasters');
+		ndistext.textContent = numdisasters + " Disaster"; 
+        if (numdisasters != 1)
+        	ndistext.textContent += "s";
+        if (numdisasters >= 7)	{
+        	ndistext.textContent += " -- Sub Destroyed!";
+			ndistext.style.color = "red";
+			ndistext.style.fontWeight = "bold";
+		} else {
+ 			ndistext.style.color = "black";
+			ndistext.style.fontWeight = "";
+       }
+		
+		var dkraken = document.getElementById('dkraken');
+		var dkwindow = document.getElementById('dkwindow');
+		krakenTime = startTime + Math.floor(Math.random()* dkwindow.value * 60000) + (dkraken.value * 60000); //45 mins to 55 mins
+		if (date > krakenTime && mode == MODES.NORMAL) {
+			var myroom = document.getElementById("kraken");
+			myroom.textContent = "Release The Kraken!";
+			myroom.style.color = "green";
+			myroom.style.fontWeight = "bold";
+			mode = MODES.RELEASE;
+		} else if (mode == MODES.RELEASE) {
+			var myroom = document.getElementById("kraken");
+			myroom.textContent = "Release The Kraken!";
+			myroom.style.color = "green";
+			myroom.style.fontWeight = "bold";
+		} else if (mode == MODES.KRAKEN) {
+			var myroom = document.getElementById("kraken");
+			myroom.textContent = "Kraken Mode!";
+			myroom.style.color = "green";
+			myroom.style.fontWeight = "normal";
+		} else if (mode == MODES.POST) {
+			var myroom = document.getElementById("kraken");
+			myroom.textContent = "Normal Mode (Post Kraken)";
+			myroom.style.color = "black";
+		} else {
+			var myroom = document.getElementById("kraken");
+			myroom.textContent = "Normal Mode";
+			myroom.style.color = "black";
+		}
+	}
+
+	function causeCalamaty () {
+		var i = Math.floor(Math.random()*numrooms);
+		var bad = Math.floor(Math.random()*3);
+		var myroom = document.getElementById(rooms[i]);
+		if (bad == 0) {
+			if (roomstate[i] != ROOM_STATES.ROOM_TO_FLOOD && roomstate[i] != ROOM_STATES.ROOM_FLOOD) {
+				myroom.textContent = roomtext[i] + ": Needs to be Flooded";
+				myroom.style.color = "blue";
+				myroom.style.fontWeight = "bold";
+                if (roomstate[i] == ROOM_STATES.ROOM_FIRE)
+                	numdisasters--;
+				roomstate[i] = ROOM_STATES.ROOM_TO_FLOOD;
+				return true;
+			}
+		} else {
+			if (roomstate[i] == ROOM_STATES.ROOM_OK) {
+				myroom.textContent = roomtext[i] + ": Needs to be Fired";
+				myroom.style.color = "red";
+				myroom.style.fontWeight = "bold";
+				roomstate[i] = ROOM_STATES.ROOM_TO_FIRE;
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	function setState(i, newstate)
+	{
+		var myroom = document.getElementById(rooms[i]);
+		myroom.style.fontWeight = "normal";
+		switch (newstate) {
+			case ROOM_STATES.ROOM_OK:
+				myroom.textContent = roomtext[i] + ": Normal";
+				myroom.style.color = "black";
+                if (roomstate[i] == ROOM_STATES.ROOM_FLOOD || roomstate[i] == ROOM_STATES.ROOM_FIRE)
+                	numdisasters--;
+				break;
+			case ROOM_STATES.ROOM_FLOOD:
+				myroom.textContent = roomtext[i] + ": Flooded";
+				myroom.style.color = "blue";
+                if (roomstate[i] != ROOM_STATES.ROOM_FLOOD && roomstate[i] != ROOM_STATES.ROOM_FIRE)
+               		numdisasters++;
+				break;
+			case ROOM_STATES.ROOM_FIRE:
+				myroom.textContent = roomtext[i] + ": On Fire";
+				myroom.style.color = "red";
+                if (roomstate[i] != ROOM_STATES.ROOM_FLOOD && roomstate[i] != ROOM_STATES.ROOM_FIRE)
+               		numdisasters++;
+				break;
+		}
+		roomstate[i] = newstate;
+	}
+	
+	function setMode(newmode)
+	{
+    	if (mode == MODES.KRAKEN && newmode == MODES.NORMAL)
+        	mode = MODES.POST;
+        else if (mode == MODES.RELEASE && newmode == MODES.KRAKEN) {
+    		mode = newmode;
+            causeCalamaty();
+            causeCalamaty();
+            causeCalamaty();
+            causeCalamaty();
+        } else
+    		mode = newmode;
+	}
+</script>
+</html>

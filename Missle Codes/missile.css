@@ -1,0 +1,240 @@
+/* CSS Document */
+
+body {
+	font-family: arial;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 100%;
+	background-color: #ffffff;
+	background-image: url(panel.png);
+	background-repeat: no-repeat;
+    }
+#rednumber0 {
+	height: 75px;
+	width: 75px;
+	position: absolute;
+	left: 143px;
+	top: 120px;
+	background-repeat: no-repeat;
+}
+#rednumber1 {
+	height: 75px;
+	width: 75px;
+	position: absolute;
+	left: 218px;
+	top: 120px;
+	background-repeat: no-repeat;
+}
+#rednumber2 {
+	height: 75px;
+	width: 75px;
+	position: absolute;
+	left: 293px;
+	top: 120px;
+	background-repeat: no-repeat;
+}
+#rednumber3 {
+	height: 75px;
+	width: 75px;
+	position: absolute;
+	left: 368px;
+	top: 120px;
+	background-repeat: no-repeat;
+}
+#downarrow0 {
+	height: 50px;
+	width: 75px;
+	position: absolute;
+	left: 143px;
+	top: 195px;
+	background-image: url(downarrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#downarrow1 {
+	height: 50px;
+	width: 75px;
+	position: absolute;
+	left: 218px;
+	top: 195px;
+	background-image: url(downarrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}#downarrow2 {
+	height: 50px;
+	width: 75px;
+	position: absolute;
+	left: 293px;
+	top: 195px;
+	background-image: url(downarrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}#downarrow3 {
+	height: 50px;
+	width: 75px;
+	position: absolute;
+	left: 368px;
+	top: 195px;
+	background-image: url(downarrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#uparrow0 {
+	height: 50px;
+	width: 75px;
+	position: absolute;
+	left: 143px;
+	top: 70px;
+	background-image: url(uparrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#uparrow1 {
+	height: 50px;
+	width: 75px;
+	position: absolute;
+	left: 218px;
+	top: 70px;
+	background-image: url(uparrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#uparrow2 {
+	height: 50px;
+	width: 75px;
+	position: absolute;
+	left: 293px;
+	top: 70px;
+	background-image: url(uparrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#uparrow3 {
+	height: 50px;
+	width: 75px;
+	position: absolute;
+	left: 368px;
+	top: 70px;
+	background-image: url(uparrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#clickhere {
+	height: 67px;
+	width: 177px;
+	position: absolute;
+	left: 206px;
+	top: 275px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(click%20here.png);
+}
+#light0 {
+	height: 44px;
+	width: 44px;
+	position: absolute;
+	left: 41px;
+	top: 125px;
+	background-image: url(lightoff.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#light1 {
+	height: 44px;
+	width: 44px;
+	position: absolute;
+	left: 41px;
+	top: 175px;
+	background-image: url(lightoff.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#light2 {
+	height: 44px;
+	width: 44px;
+	position: absolute;
+	left: 41px;
+	top: 225px;
+	background-image: url(lightoff.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#light3 {
+	height: 44px;
+	width: 44px;
+	position: absolute;
+	left: 41px;
+	top: 275px;
+	background-image: url(lightoff.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#countdown {
+	height: 28px;
+	width: 250px;
+	position: absolute;
+	left: 171px;
+	top: 459px;
+	font-family: Kremlin;
+	font-size: 12pt;
+	color: #000;
+}
+#switch0 {
+	height: 77px;
+	width: 60px;
+	position: absolute;
+	left: 164px;
+	top: 375px;
+	background-image: url(switchup.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#switch1 {
+	height: 77px;
+	width: 60px;
+	position: absolute;
+	left: 224px;
+	top: 375px;
+	background-image: url(switchup.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#switch2 {
+	height: 77px;
+	width: 60px;
+	position: absolute;
+	left: 284px;
+	top: 375px;
+	background-image: url(switchup.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#switch3 {
+	height: 77px;
+	width: 60px;
+	position: absolute;
+	left: 344px;
+	top: 375px;
+	background-image: url(switchup.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#captain {
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	left: 632px;
+	top: 211px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#audiopanel {
+	height: 60px;
+	width: 235px;
+	position: absolute;
+	left: 482px;
+	top: 412px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
